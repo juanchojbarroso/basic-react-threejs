@@ -4,6 +4,7 @@ import Box from "../components/Box";
 import OrbitControls from "../components/OrbitControls";
 import Light from "../components/Light";
 import Floor from "../components/Floor";
+import Draggable from "../components/Draggable";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
       >
         <ambientLight color={"white"} intensity={0.2} />
         <Light position={[0, 3, 0]} />
-          <Box rotateX={3} rotateY={0.2} />
+        <Draggable>
+            <Box rotateX={3} rotateY={0.2} />
+        </Draggable>
         <OrbitControls />
         <Floor position={[0, -1, 0]} />
       </Canvas>
